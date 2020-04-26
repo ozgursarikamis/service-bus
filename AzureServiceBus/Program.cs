@@ -13,7 +13,8 @@ namespace AzureServiceBus
         
         private static void Main()
         {
-            MainAsync().GetAwaiter().GetResult();
+            // MainAsync().GetAwaiter().GetResult();
+            
         }
 
         // Write messages to queue:
@@ -25,7 +26,7 @@ namespace AzureServiceBus
             await _queueClient.CloseAsync();
         }
 
-        static async Task SendMessageAsync(int numberOfMessagesToSend)
+        private static async Task SendMessageAsync(int numberOfMessagesToSend)
         {
             try
             {
